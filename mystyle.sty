@@ -18,7 +18,16 @@
 \usepackage{graphicx}
 
 \usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{multicol}
+
 \usepackage{listings}
+
+\usepackage[backend=biber, style=numeric, sorting=none]{biblatex}
+\DefineBibliographyStrings{english}{%
+  references = {参考文献},% replace "references" with "bibliography"  for `book`/`report`
+}
 
 \lstset{
     language=Python,%プログラミング言語によって変える。
