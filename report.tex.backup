@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{mystyle}
+\usepackage{cases}
+
+\addbibresource{ref.bib}
+
+\begin{document}
+\section{滑面壁モデル}
+壁面隣接セル内で, 壁面へ行こう方向に近似した運動量式
+\begin{equation*}
+ \frac{\partial}{\partial y^*} \left( (\mu + \mu_t)\ \frac{\partial U}{\partial y^*} \right) = \frac{\nu^2}{k_P} \left( \frac{\partial}{\partial x}\ (\rho U U) + \frac{\partial P}{\partial x} \right)
+\end{equation*}
+この式の右辺を$C_U$とし, 
+\begin{equation}
+ \label{eq:momentum}
+ \frac{\partial}{\partial y^*} \left( (\mu + \mu_t)\ \frac{\partial U}{\partial y^*} \right) = C_U
+\end{equation}
+ここで, $y^* \equiv y \sqrt{k_p} / \nu $
+乱流渦粘性係数$\mu_t$を, 1方程式モデルのように近似
+\begin{equation}
+ \mu_t = \rho c_\mu k^{1/2} l = \rho c_\mu k^{1/2} c_l y \simeq \alpha \mu y^*
+\end{equation}
+ここで, $\alpha = c_l c_\mu$ とモデル化する.
+さらに, 粘性低層を考慮して, 
+\begin{equation}
+  \mu_t = \max(0, \alpha \mu (y^* - y_v^*))
+\end{equation}
+式\ref{eq:momentum}を解析的に積分することが可能. 粘性低層暑さ$y_v^*$を境にして
+\begin{subnumcases}
+ {\frac{\partial U}{\partial y^*} = }
+ (C_U y^* + A_U)/\mu, \mathrm{if\ } y^* < y_v^* & \\
+ \frac{C_U y^* + A'_U}{\mu(1 + \alpha (y^* - y_v^*))} \mathrm{if\ } y^* \geq y_v^* &
+\end{subnumcases}
+
+\begin{subnumcases}
+ {U = }
+  \frac{1}{2 \mu} C_U {y^*}^2 + \frac{1}{\mu} A_U y^* + B_U, \mathrm{if\ } y^* < y_v^*& \\
+  \frac{C_U}{\alpha \mu} + \left( \frac{A_U'}{\alpha \mu} - \frac{C_U}{\alpha^2 \mu} (1 - \alpha y_v^*) \right) ln(1 + \alpha(y^* - y_v^*)) + B_U'&
+\end{subnumcases}
+
+
+
+
+\end{document}
