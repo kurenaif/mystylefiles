@@ -1,0 +1,51 @@
+\setlength{\textwidth}{12.5cm}
+\setlength{\textheight}{20cm}
+\setlength{\leftmargin}{1cm}
+\setlength{\topmargin}{-2cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+
+\usepackage{hyperref}
+
+\usepackage{graphicx}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{nameref}
+
+\usepackage{caption}
+\DeclareCaptionFont{mysize}{\fontsize{9pt}{0}\selectfont}
+\captionsetup[figure]{format=plain, labelformat=simple, labelsep=space, font=mysize}
+\captionsetup[table]{format=plain, labelformat=simple, labelsep=space, font=mysize}
+
+% \usepackage[backend=bibtex, style=numeric-comp, sorting=none]{biblatex}
+
+\usepackage[subrefformat=parens]{subcaption}	
+
+\renewcommand{\figurename}{Fig. }
+\renewcommand{\tablename}{Table }
+
+\newcommand{\p}{\partial}
+\newcommand{\average}[1]{\ensuremath{\langle#1\rangle} }
+
+\def\Hline{
+\noalign{\ifnum0=`}\fi\hrule \@height 4.\arrayrulewidth \futurelet
+  \reserved@a\@xhline}
+  
+\usepackage[sf,bf,compact,topmarks,calcwidth,pagestyles]{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{\chaptertitlename~\thechapter 章}{0pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+\titlespacing*{name=\chapter,numberless}{0pt}{-30pt}{10pt}
+
+\titleformat{\section}[block]
+  {\fontsize{12}{15}\bfseries\sffamily\Large\vspace{1em}}
+  {\thesection}
+  {0.5em}
+  {}
+ 
+ \titleformat{\subsection}[block]
+  {\fontsize{12}{15}\bfseries\sffamily\vspace{1em}}
+  {\thesubsection}
+  {0.5em}
+  {}
